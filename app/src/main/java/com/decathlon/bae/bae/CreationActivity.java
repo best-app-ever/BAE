@@ -1,8 +1,17 @@
 package com.decathlon.bae.bae;
 
+import android.app.Activity;
+import android.os.Bundle;
+
 /**
  * Created by Ashutosh on 23/11/2017.
  */
 
-public class CreationActivity {
+public class CreationActivity extends Activity{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_creation);
+    }
 }
