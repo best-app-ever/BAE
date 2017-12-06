@@ -24,5 +24,13 @@ public class CustomerActivity extends Activity {
                 startActivity(intent);
             }
         });
+        Button button1 = (Button) findViewById(R.id.button5);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(CustomerActivity.this,LoginActivity.class);
+                startActivity(intent1);
+            }
+        });
     }
 }
