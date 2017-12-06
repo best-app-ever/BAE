@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".CustomerActivity"/>
         <activity android:name=".CreationActivity"/>
+        <activity android:name=".LoginActivity"/>
     </application>
 
 </manifest>
