@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +24,7 @@ import static android.content.ContentValues.TAG;
 
 public class CreationActivity extends Activity {
     private FirebaseAuth mAuth;
+    private static final String TAG = "EmailPassword";
     @Override
     public void onStart() {
         super.onStart();
@@ -43,11 +45,15 @@ public class CreationActivity extends Activity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            String text = user.getEmail();
+                            Toast.makeText(CreationActivity.this,text,
+                                    Toast.LENGTH_SHORT).show();
 
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(CreationActivity.this, "Authentication failed.",
+                            String something = task.getException().toString();
+                            Toast.makeText(CreationActivity.this, something,
                                     Toast.LENGTH_SHORT).show();
 
                         }
