@@ -56,7 +56,7 @@ public class LoginActivity extends Activity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
+                            Log.d(TAG, "signInWithEmail:successfully");
                             FirebaseUser user = mAuth.getCurrentUser();
                             String text = user.getEmail();
                             Toast.makeText(LoginActivity.this,text,
